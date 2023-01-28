@@ -30,6 +30,7 @@ We began by creating an image using a thoracic Shepp-Logan phantom. Several tuni
 Many different images were obtained for various array lengths, detector quantities, and angle resolutions. The squared error between the reconstructed image and the original were computed as a metric to judge reconstruction quality. Furthermore, we tried to reduce the squared error through image enhancement. Some filters included adaptive Wiener FIR filters, median filters, and high pass filters[2]
 
 Let's see geometry and model[3]
+
 <img src="https://raw.githubusercontent.com/jolapodolszanska/shepp-loganphan-phantom-2D/main/Tomography-with-parallel-beam-geometry-The-left-image-shows-the-geometry-of-a-typical_W640.jpg" />
 
 ### References
