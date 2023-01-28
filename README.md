@@ -1,8 +1,10 @@
+### Shepp-Logan phantom
+
 Shepp-Logan phantom is is a standard test image created by Larry Shepp and Benjamin F. Logan for their 1974 paper The Fourier Reconstruction of a Head Section.It serves as the model of a human head in the development and testing of image reconstruction algorithms.
 
 
 
-I know how difficult it is to implement this model, which is why I present the simplest solution. YMy model was created by values of the table:
+I know how difficult it is to implement this model, which is why I present the simplest solution. My model was created by values of the table:
 
 |Ellipse  | Center         |  Major Axis  | Minor Axis  | Theta | Gray level  |
 | --------| ---------------|--------------|-------------|-------|-------------|
@@ -18,4 +20,13 @@ I know how difficult it is to implement this model, which is why I present the s
 | X       | (0.06,−0.605)  |  0.023       | 0.046       | 0     | 0.01        |
 
 Result of running application:
-<img src="https://raw.githubusercontent.com/effype/shepp-logan-phantom/master/img/Screenshot_11.png" />
+
+<img src="https://raw.githubusercontent.com/jolapodolszanska/shepp-loganphan-phantom-2D/main/pobrane.png" />
+
+### Parallel Beam CT 
+
+We began by creating an image using a thoracic Shepp-Logan phantom. Several tuning parameters were added to simulate object movement (shifting). Projections are created through line integrals (summations) between two points anywhere inside and/or outside the image. Details can be found in the Thoracic Cavity Phantom section of the report. For a given angle, a projection consists of a vector of parallel line integrals formed by a source on one side of the image and a line of detectors on the other. The size of the projection vector is equal to the number of detectors in the array. Thus, a ten detector projection will have ten line integral summations. The detectors can be spaced apart at various widths depending on the array length. Thus, an array of length two with ten detectors will have twice the spacing between detectors as an array of length one with ten detectors. We compute these projections for various uniform angle spacing between 0 and 180 degrees.
+
+Many different images were obtained for various array lengths, detector quantities, and angle resolutions. The squared error between the reconstructed image and the original were computed as a metric to judge reconstruction quality. Furthermore, we tried to reduce the squared error through image enhancement. Some filters included adaptive Wiener FIR filters, median filters, and high pass filters.
+
+<img src="https://raw.githubusercontent.com/jolapodolszanska/shepp-loganphan-phantom-2D/main/Tomography-with-parallel-beam-geometry-The-left-image-shows-the-geometry-of-a-typical_W640.jpg" />
