@@ -34,5 +34,7 @@ Let's see geometry and model[3]
 
 ### References
 [1] Shepp, Larry A.; Logan, Benjamin F. (June 1974). "The Fourier Reconstruction of a Head Section" (PDF). IEEE Transactions on Nuclear Science. NS-21 (3): 21–43
+
 [2] Robert Cierniak, X-Ray Computed Tomography in Biomedical Engineering, 2011, Springer, ISBN : 978-0-85729-026-7
+
 [3] Bleichrodt, F., van Leeuwen, T., Palenstijn, W.J. et al. Easy implementation of advanced tomography algorithms using the ASTRA toolbox with Spot operators. Numer Algor 71, 673–697 (2016). https://doi.org/10.1007/s11075-015-0016-4
